@@ -1,0 +1,64 @@
+#butacas{
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+#bloque1{
+    width: 80%;
+}
+
+.asientos{
+    width: 5%;
+    height: 40px;
+    margin-bottom: 5px;
+    background: url("images/buta.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: aliceblue;
+    font-size: 1.2em;
+    
+}
+
+.filas{
+    width: 5%;
+    height: 40px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: darkslategray;
+    font-size: 1.2em;
+    text-align: center; 
+}
+
+body{
+    text-align: center;
+    background-color:aliceblue;
+}
+
+#pantalla{
+   width: 80%;
+    height: 3%;
+    background-color:  darkslategray;
+    margin: auto;
+}
+
+table{
+    margin: auto;
+    margin-bottom: 6%;
+    position: relative;
+}
+
+.pasillo{
+   width: 5%;
+    height: 40px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: darkred;
+    font-size: 1.2em;
+    text-align: center;  
+}
+
+
