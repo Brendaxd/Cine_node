@@ -184,7 +184,7 @@ class _Pelicula {
         // Do the usual XHR stuff
             try {
                 var xhr = new XMLHttpRequest();
-                xhr.open('POST', 'http://localhost:8080/api/seleccionarporid');
+                xhr.open('POST', 'http://localhost:8080/api/seleccionarpeliculaporid');
                 xhr.setRequestHeader('Content-Type', 'application/json');
                 xhr.onload = function() {
                     if (xhr.status === 200) {

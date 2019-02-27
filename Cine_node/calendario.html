@@ -87,11 +87,10 @@
     <link type="text/css" rel="stylesheet" href="calendario.css">
     <script type="text/javascript" src="nueva_frontend.js"></script>
     <script type="text/javascript">
-        function agregaimgdepeliculaaldiv(imgenbase64,iddeldiv,iddelapelicula)
-        {
-            document.getElementById(iddeldiv).innerHTML += "<img src='"+imgenbase64+"' height='30' width='30' id= '"+iddelapelicula+"'onclick='cargataquilla('"+iddelapelicula+"')'>"
-            document.getElementById
-        }
+         function agregaimgdepeliculaaldiv(imgenbase64,iddeldiv,iddelapelicula)  //  Primero llega a la funcion de abajo cargarpeliculasdelmesyanno
+            {
+                document.getElementById(iddeldiv).innerHTML += "<img src='"+imgenbase64+"' height='30' width='30' id= "+iddelapelicula+" onclick='cargataquilla(\""+iddelapelicula+"\")'>"; //  El fec dentro del getElementById es porque solo reconoce los numeros y hay que concatenar el fec
+            }
     
         function cargarpeliculasdelmesyanno()
         {
@@ -108,7 +107,19 @@
         }
         
         
-        
+       function cargataquilla(id)
+        {
+             let clasepeliculainstanciada = new _Pelicula(id);
+               clasepeliculainstanciada.Seleccionarporid().then(function(response) {
+
+
+
+               localStorage.setItem("peliculaseleccionada",JSON.stringify(response));
+                   location.href="butacas.html"
+               }, function(error) {
+                console.log(error);
+                });
+        }
     </script>
 </body>
 </html>

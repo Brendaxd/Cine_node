@@ -5,8 +5,8 @@
     <link type="text/css" rel="stylesheet" href="butacas.css">
 </head>
     
-<body>
-    <h1>Butacas en la sala</h1>
+<body onload="cargardatosdelapelicula()">
+    <h1 id="titulodelapelicula"></h1>
     <br>
     <br>
     <br>
@@ -14,78 +14,109 @@
         <table id="bloque1">
             <tr>
                 <td class="filas">H</td>
-                <td class="asientos">1</td>
-                <td class="asientos">2</td>
-                <td class="asientos">3</td>
-                <td class="asientos">4</td>
+                <td class="asientos"><a class="button" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" href="#popup1">4</a></td>
             </tr>
             <tr>
                 <td class="filas">G</td>
-                <td class="asientos">1</td>
-                <td class="asientos">2</td>
-                <td class="asientos">3</td>
-                <td class="asientos">4</td>
+                <td class="asientos"><a class="button" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" href="#popup1">4</a></td>
             </tr>
             <tr>
                 <td class="filas">F</td>
-                <td class="asientos">1</td>
-                <td class="asientos">2</td>
-                <td class="asientos">3</td>
-                <td class="asientos">4</td>
+                <td class="asientos"><a class="button" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" href="#popup1">4</a></td>
             </tr>
             <tr>
                 <td class="filas">E</td>
-                <td class="asientos">1</td>
-                <td class="asientos">2</td>
-                <td class="asientos">3</td>
-                <td class="asientos">4</td>
+                <td class="asientos"><a class="button" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" href="#popup1">4</a></td>
             </tr>
             <tr>
                 <td class="filas">D</td>
-                <td class="asientos">1</td>
-                <td class="asientos">2</td>
-                <td class="asientos">3</td>
-                <td class="asientos">4</td>
+                <td class="asientos"><a class="button" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" href="#popup1">4</a></td>
                 <td class="pasillo"></td>
                 <td class="pasillo"></td>
-                <td class="asientos">5</td>
+                <td class="asientos"><a class="button" href="#popup1">5</a></td>
                 <td class="filas">D</td>
             </tr>
             <tr>
                 <td class="filas">C</td>
-                <td class="asientos">1</td>
-                <td class="asientos">2</td>
-                <td class="asientos">3</td>
-                <td class="asientos">4</td>
+                <td class="asientos"><a class="button" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" href="#popup1">4</a></td>
                 <td class="pasillo"></td>
-                <td class="asientos">5</td>
-                <td class="asientos">6</td>
+                <td class="asientos"><a class="button" href="#popup1">5</a></td>
+                <td class="asientos"><a class="button" href="#popup1">6</a></td>
                 <td class="filas">C</td>
             </tr>
             <tr>
                 <td class="filas">B</td>
-                <td class="asientos">1</td>
-                <td class="asientos">2</td>
-                <td class="asientos">3</td>
-                <td class="asientos">4</td>
+                <td class="asientos"><a class="button" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" href="#popup1">4</a></td>
                 <td class="pasillo"></td>
-                <td class="asientos">5</td>
-                <td class="asientos">6</td>
+                <td class="asientos"><a class="button" href="#popup1">5</a></td>
+                <td class="asientos"><a class="button" href="#popup1">6</a></td>
                 <td class="filas">B</td>
             </tr>
             <tr>
                 <td class="filas">A</td>
-                <td class="asientos">1</td>
-                <td class="asientos">2</td>
-                <td class="asientos">3</td>
-                <td class="asientos">4</td>
+                <td class="asientos"><a class="button" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" href="#popup1">4</a></td>
                 <td class="pasillo"></td>
-                <td class="asientos">5</td>
-                <td class="asientos">6</td>
+                <td class="asientos"><a class="button" href="#popup1">5</a></td>
+                <td class="asientos"><a class="button" href="#popup1">6</a></td>
                 <td class="filas">A</td>
             </tr>
         </table>
         <div id="pantalla"></div>
     </div>
+    
+    <div class="box">
+        <a class="button" href="#popup1">Let me Pop up</a>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Información del cliente</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <input type="text" id="nombreestudiante" placeholder="Nombre">
+                <br>
+                <br>
+                <input type="text" id="nombreestudiante" placeholder="Sección">
+                <br>
+                <br>
+                <input type="number" id="nombreestudiante" placeholder="Carné">
+                <br><br>
+                <input type="button" id="enviar" value="Guardar">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function cargardatosdelapelicula()
+            {
+                var pelicula = JSON.parse(localStorage.getItem('peliculaseleccionada'))
+
+                document.getElementById("titulodelapelicula").innerHTML += pelicula[0].NOMBRE + "<hr><p>Tanda: "+pelicula[0].FECHA+ " Inicia: "+pelicula[0].HORAINICIO +": "+pelicula[0].MINUTOINICIO+"<p/>";
+            }
+    </script>
 </body>
 </html>

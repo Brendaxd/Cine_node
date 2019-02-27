@@ -125,6 +125,9 @@ module.exports = class _Pelicula {
     }
     
     Seleccionarporid(req,res) {
+        console.log(req);
+        
+        
       Item.find({_id:req.body._id}, function(err, item) {
         if (err)
         {
