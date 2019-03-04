@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>    <meta charset="utf-8">
+	<title>Cines Pandi jiji</title>
+	<link href="https://file.myfontastic.com/wkB5qsdpYrUwj3t76hyKV4/icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/Estilo menu.css">
+	<script src="jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/Archivo menu.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="menu_bar">
+			<a href="#" class="bt_menu"><span class="icon-bars"></span>Menu</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="Cinema.html"><span class="icon-results"></span>Inicio</a></li>
+				<li><a href="calendario.html">Calendario</a></li>
+				<li class="submenu"><a href="nuevapelicula.html">Insertar peli</a></li>
+			</ul>
+		</nav>
+	</header>
+<body onload="cargarpeliculasdelmesyanno()">
+<!-- inspired by http://colorhunt.co/c/8184 and 
+    https://dribbble.com/shots/2407357-Calendar%60 -->
+
+    <div class="container">
+      <div class="calendar">
+        <div class="front">
+          <div class="current-date">
+            <h1 id="mesactual">3</h1>
+            <h1>Marzo</h1>
+              <h1 id="annoactual">2019</h1>
+          </div>
+
+          <div class="current-month">
+            <ul class="week-days">
+              <li>MON</li>
+              <li>TUE</li>
+              <li>WED</li>
+              <li>THU</li>
+              <li>FRI</li>
+              <li>SAT</li>
+              <li>SUN</li>
+            </ul>
+
+            <div class="weeks">
+              <div class="first">
+                <span class="last-month">28</span>
+                <span class="last-month">29</span>
+                <span id="1">01</span>
+                <span id="2">02</span>
+                <span id="3">03</span>
+                <span id="4">04</span>
+                <span id="5">05</span>
+              </div>
+
+              <div class="second">
+                <span id="6">06</span>
+                <span id="7">07</span>
+                <span id="8">08</span>
+                <span id="9">09</span>
+                <span id="10">10</span>
+                <span id="11">11</span>
+                <span id="12">12</span>
+              </div>
+
+              <div class="third">
+                <span id="13">13</span>
+                <span id="14">14</span>
+                <span id="15">15</span>
+                <span id="16">16</span>
+                <span id="17">17</span>
+                <span id="18">18</span>
+                <span id="19">19</span>
+              </div>
+
+              <div class="fourth">
+                <span id="20">20</span>
+                <span id="21">21</span>
+                <span id="22">22</span>
+                <span id="23">23</span>
+                <span id="24">24</span>
+                <span id="25">25</span>
+                <span id="26">26</span>
+              </div>
+
+              <div class="fifth">
+                <span id="27">27</span>
+                <span id="28">28</span>
+                <span id="29">29</span>
+                <span id="30">30</span>
+                <span id="31">31</span>
+                <span class="last-month">01</span>
+                <span class="last-month">02</span>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <link type="text/css" rel="stylesheet" href="calendario.css">
+    <script type="text/javascript" src="nueva_frontend.js"></script>
+    <script type="text/javascript">
+         function agregaimgdepeliculaaldiv(imgenbase64,iddeldiv,iddelapelicula)  //  Primero llega a la funcion de abajo cargarpeliculasdelmesyanno
+            {
+                document.getElementById(iddeldiv).innerHTML += "<img src='"+imgenbase64+"' height='30' width='30' id= "+iddelapelicula+" onclick='cargataquilla(\""+iddelapelicula+"\")'>"; //  El fec dentro del getElementById es porque solo reconoce los numeros y hay que concatenar el fec
+            }
+    
+        function cargarpeliculasdelmesyanno()
+        {
+            let clasepeliculainstanciada = new _Pelicula();
+            clasepeliculainstanciada.peliculapormesyanno(document.getElementById("mesactual").innerHTML,document.getElementById("annoactual").innerHTML).then(function(response){
+                for(var elemento in response)
+                {
+                    var fechadelapeliculaactual = new Date(response[elemento].FECHA);
+                    agregaimgdepeliculaaldiv(response[elemento].IMAGEN,fechadelapeliculaactual.getDate(),response[elemento]._id);
+                }
+            }, function(error) {
+                console.log(error);
+            });
+        }
+        
+        
+       function cargataquilla(id)
+        {
+             let clasepeliculainstanciada = new _Pelicula(id);
+               clasepeliculainstanciada.Seleccionarporid().then(function(response) {
+
+
+
+               localStorage.setItem("peliculaseleccionada",JSON.stringify(response));
+                   location.href="butacas.html"
+               }, function(error) {
+                console.log(error);
+                });
+        }
+    </script>
+</body>
+</html>

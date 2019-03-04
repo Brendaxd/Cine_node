@@ -1,0 +1,143 @@
+<html>
+<head>
+    <title>Butacas</title>
+    <link href="https://file.myfontastic.com/wkB5qsdpYrUwj3t76hyKV4/icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/Estilo menu.css">
+	<script src="jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/Archivo menu.js"></script>
+    <link href="https://file.myfontastic.com/wkB5qsdpYrUwj3t76hyKV4/icons.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="butacas.css">
+</head>
+    
+<body onload="cargardatosdelapelicula()">
+    <header>
+		<div class="menu_bar">
+			<a href="#" class="bt_menu"><span class="icon-bars"></span>Menu</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="Cinema.html"><span class="icon-results"></span>Inicio</a></li>
+				<li><a href="calendario.html">Calendario</a></li>
+				<li class="submenu"><a href="nuevapelicula.html">Insertar peli</a></li>
+			</ul>
+		</nav>
+	</header>
+    
+    <h1 id="titulodelapelicula"></h1>
+    <br>
+    <br>
+    <br>
+    <div id="butacas">
+        <table id="bloque1">
+            <tr>
+                <td class="filas">H</td>
+                <td class="asientos"><a class="button" onclick="butaca('H1')" id="H1" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('H2')" id="H2" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('H3')" id="H3" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('H4')" id="H4" href="#popup1">4</a></td>
+            </tr>
+            <tr>
+                <td class="filas">G</td>
+                <td class="asientos"><a class="button" onclick="butaca('G1')" id="G1" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('G2')" id="G2" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('G3')" id="G3" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('G4')" id="G4" href="#popup1">4</a></td>
+            </tr>
+            <tr>
+                <td class="filas">F</td>
+                <td class="asientos"><a class="button" onclick="butaca('F1')" id="F1" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('F2')" id="F2" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('F3')" id="F3" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('F4')" id="F4" href="#popup1">4</a></td>
+            </tr>
+            <tr>
+                <td class="filas">E</td>
+                <td class="asientos"><a class="button" onclick="butaca('E1')" id="E1" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('E2')" id="E2" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('E3')" id="E3" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('E4')" id="E4" href="#popup1">4</a></td>
+            </tr>
+            <tr>
+                <td class="filas">D</td>
+                <td class="asientos"><a class="button" onclick="butaca('D1')" id="D1" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('D2')" id="D2" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('D3')" id="D3" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('D4')" id="D4" href="#popup1">4</a></td>
+                <td class="pasillo"></td>
+                <td class="pasillo"></td>
+                <td class="asientos"><a class="button" href="#popup1">5</a></td>
+                <td class="filas">D</td>
+            </tr>
+            <tr>
+                <td class="filas">C</td>
+                <td class="asientos"><a class="button" onclick="butaca('C1')" id="C1" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('C2')" id="C2" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('C3')" id="C3" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('C4')" id="C4" href="#popup1">4</a></td>
+                <td class="pasillo"></td>
+                <td class="asientos"><a class="button" onclick="butaca('C5')" id="C5" href="#popup1">5</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('C6')" id="C6" href="#popup1">6</a></td>
+                <td class="filas">C</td>
+            </tr>
+            <tr>
+                <td class="filas">B</td>
+                <td class="asientos"><a class="button"  onclick="butaca('B1')" id="B1" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button"  onclick="butaca('B2')" id="B2" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button"  onclick="butaca('B3')" id="B3" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button"  onclick="butaca('B4')" id="B4" href="#popup1">4</a></td>
+                <td class="pasillo"></td>
+                <td class="asientos"><a class="button"  onclick="butaca('B5')" id="B5" href="#popup1">5</a></td>
+                <td class="asientos"><a class="button"  onclick="butaca('B6')" id="B6" href="#popup1">6</a></td>
+                <td class="filas">B</td>
+            </tr>
+            <tr>
+                <td class="filas">A</td>
+                <td class="asientos"><a class="button" onclick="butaca('A1')" id="A1" href="#popup1">1</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('A2')" id="A2" href="#popup1">2</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('A3')" id="A3" href="#popup1">3</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('A4')" id="A4" href="#popup1">4</a></td>
+                <td class="pasillo"></td>
+                <td class="asientos"><a class="button" onclick="butaca('A5')" id="A5" href="#popup1">5</a></td>
+                <td class="asientos"><a class="button" onclick="butaca('A6')" id="A6" href="#popup1">6</a></td>
+                <td class="filas">A</td>
+            </tr>
+        </table>
+        <div id="pantalla"></div>
+    </div>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Información del cliente</h2>
+            <h3 id="butacaselect" value=""></h3>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <input type="text" id="iddelinputnombredelmodal" placeholder="Nombre">
+                <br>
+                <br>
+                <input type="number" id="iddelinputCrnetdelmodal" placeholder="Carné">
+                <br>
+                <br>
+                <input type="text"  id="iddelinputsecciondelmodal" placeholder="Sección">
+                <br><br>
+                <input type="button" id="enviar" onclick="cargadatosdelabutaca()" value="Guardar">
+            </div>
+        </div>
+    </div>
+    <script src="js/guardardatos.js"></script>
+    <script src="nueva_frontend.js"></script>
+    <script>
+        function cargardatosdelapelicula()
+            {
+                var pelicula = JSON.parse(localStorage.getItem('peliculaseleccionada'))
+
+                document.getElementById("titulodelapelicula").innerHTML += pelicula[0].NOMBRE + "<hr><p>Tanda: "+pelicula[0].FECHA+ " Inicia: "+pelicula[0].HORAINICIO +": "+pelicula[0].MINUTOINICIO+"<p/>";
+            }
+        
+        function butaca(but)
+            {
+                document.getElementById("butacaselect").value=but;
+                document.getElementById("butacaselect").innerHTML=but;
+            }
+    </script>
+</body>
+</html>
